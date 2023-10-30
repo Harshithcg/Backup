@@ -1,0 +1,42 @@
+Started by user [8mha:////4N0CMtRuGVRckbi4UXRyf9KZbtIFZ0pExLt53ZxDXgvPAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL9lNQy3eR0AACYzQDBAAAA[0mDev-cg
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Cproject
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Cproject/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Harshithcg/Test1.git # timeout=10
+Fetching upstream changes from https://github.com/Harshithcg/Test1.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Harshithcg/Test1.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 85dadc49ebae89c53b94f18615889d5508e9e1e1 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 85dadc49ebae89c53b94f18615889d5508e9e1e1 # timeout=10
+Commit message: "Create test"
+ > git rev-list --no-walk 85dadc49ebae89c53b94f18615889d5508e9e1e1 # timeout=10
+[Cproject] $ /bin/sh -xe /tmp/jenkins9886062517879669710.sh
++ cd /var/lib/jenkins/workspace/Cproject
++ make abc.exe
+gcc -c main.c
+main.c:1:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+    1 | main()  {
+      | ^~~~
+main.c: In function ‘main’:
+main.c:2:9: warning: implicit declaration of function ‘biggest2’ [-Wimplicit-function-declaration]
+    2 |         biggest2();
+      |         ^~~~~~~~
+main.c:3:9: warning: implicit declaration of function ‘factorial’ [-Wimplicit-function-declaration]
+    3 |         factorial();
+      |         ^~~~~~~~~
+gcc -c big2.c
+big2.c:2:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+    2 | biggest2()
+      | ^~~~~~~~
+gcc -c fact.c
+fact.c:2:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+    2 | factorial() {
+      | ^~~~~~~~~
+gcc -o abc.exe main.o fact.o big2.o
+Finished: SUCCESS
